@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="refresh" content="60">
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c903dbfc48327da1729e20201dc1dbb9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c903dbfc48327da1729e20201dc1dbb9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c903dbfc48327da1729e20201dc1dbb9 = L.map(
+                "map_c903dbfc48327da1729e20201dc1dbb9",
+                {
+                    center: [1.4955153333333333, 110.40196566666667],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 18,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_18b54634c9a6d7ad5456d32c25153937 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}\u0026key=AIzaSyDhvIP6AAt1tLmWP5ezECJC5jh3IexuRkc",
+                {"attribution": "Tiles \u00a9 Google", "detectRetina": false, "maxZoom": 22, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_18b54634c9a6d7ad5456d32c25153937.addTo(map_c903dbfc48327da1729e20201dc1dbb9);
+        
+    
+            var measure_control_465decff395ebbec2b986569912dc6ec = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_c903dbfc48327da1729e20201dc1dbb9.addControl(measure_control_465decff395ebbec2b986569912dc6ec);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var marker_2fcd03f831cbf9aa94518824f6c0fa39 = L.marker(
+                [1.495213, 110.401779],
+                {}
+            ).addTo(map_c903dbfc48327da1729e20201dc1dbb9);
+        
+    
+            var icon_789b6de1a46555b062dcfa49fc13f736 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2fcd03f831cbf9aa94518824f6c0fa39.setIcon(icon_789b6de1a46555b062dcfa49fc13f736);
+        
+    
+        var popup_48ae8791d7b016d8e34f641b82990f13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_044b791aa4039d7591a8bdd6c4ca2455 = $(`<div id="html_044b791aa4039d7591a8bdd6c4ca2455" style="width: 100.0%; height: 100.0%;">Node 2 (1.495213, 110.401779)<br>Time: 2024-10-15 14:14:34<br>Distance from Node 1 to 2: 78.44 meters<br><b style='color:red'>Inactive for over 3 days</b></div>`)[0];
+                popup_48ae8791d7b016d8e34f641b82990f13.setContent(html_044b791aa4039d7591a8bdd6c4ca2455);
+            
+        
+
+        marker_2fcd03f831cbf9aa94518824f6c0fa39.bindPopup(popup_48ae8791d7b016d8e34f641b82990f13)
+        ;
+
+        
+    
+    
+            var marker_2f32c73565e228a7df110ceacb06e3e6 = L.marker(
+                [1.495503, 110.401997],
+                {}
+            ).addTo(map_c903dbfc48327da1729e20201dc1dbb9);
+        
+    
+            var icon_af89a84da06fd5fbfb62223794ed69c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2f32c73565e228a7df110ceacb06e3e6.setIcon(icon_af89a84da06fd5fbfb62223794ed69c3);
+        
+    
+        var popup_6b707574c30ce0570914d0cfbed97eab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a91f8a214560030a29f8476b404a2f2b = $(`<div id="html_a91f8a214560030a29f8476b404a2f2b" style="width: 100.0%; height: 100.0%;">Node 3 (1.495503, 110.401997)<br>Time: 2024-10-15 09:26:09<br>Distance from Node 2 to 3: 40.34 meters<br><b style='color:red'>Inactive for over 3 days</b></div>`)[0];
+                popup_6b707574c30ce0570914d0cfbed97eab.setContent(html_a91f8a214560030a29f8476b404a2f2b);
+            
+        
+
+        marker_2f32c73565e228a7df110ceacb06e3e6.bindPopup(popup_6b707574c30ce0570914d0cfbed97eab)
+        ;
+
+        
+    
+    
+            var poly_line_184c922dc3f900e06a7bc18b4a19cc7a = L.polyline(
+                [[1.49583, 110.402121], [1.495213, 110.401779], [1.495503, 110.401997], [1.49583, 110.402121]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c903dbfc48327da1729e20201dc1dbb9);
+        
+    
+            var marker_d8c9cf92cbd3aee1afe2e8c3ad26b565 = L.marker(
+                [1.49583, 110.402121],
+                {}
+            ).addTo(map_c903dbfc48327da1729e20201dc1dbb9);
+        
+    
+            var icon_acf35afd770d3f31ffb7c78bc1f32aca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d8c9cf92cbd3aee1afe2e8c3ad26b565.setIcon(icon_acf35afd770d3f31ffb7c78bc1f32aca);
+        
+    
+        var popup_f80647cd0881773d47a46f8a55ed14c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9045a603d5dac2de0bb9bdcc8ca057ac = $(`<div id="html_9045a603d5dac2de0bb9bdcc8ca057ac" style="width: 100.0%; height: 100.0%;">Node 1 (1.49583, 110.402121)<br>Time: 2024-10-15 16:57:21<br>Distance from last node to Node 1: 38.89 meters<br><b style='color:red'>Inactive for over 3 days</b></div>`)[0];
+                popup_f80647cd0881773d47a46f8a55ed14c6.setContent(html_9045a603d5dac2de0bb9bdcc8ca057ac);
+            
+        
+
+        marker_d8c9cf92cbd3aee1afe2e8c3ad26b565.bindPopup(popup_f80647cd0881773d47a46f8a55ed14c6)
+        ;
+
+        
+    
+</script>
+</html>
